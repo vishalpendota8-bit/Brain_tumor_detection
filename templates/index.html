@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Tumor Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 Brain Tumor Detection</h1>
+        <p class="subtitle">Upload an MRI scan to check for the presence of a tumor.</p>
+
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+            <label class="upload-box" id="uploadBox">
+                <input type="file" name="file" id="fileInput" accept="image/*" required>
+                <span id="uploadText">Click to choose an MRI image</span>
+                <img id="preview" src="" alt="" hidden>
+            </label>
+            <button type="submit" class="btn">Analyze Scan</button>
+        </form>
+
+        <a href="/history" class="history-link">View Prediction History →</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

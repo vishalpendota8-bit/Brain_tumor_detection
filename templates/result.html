@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+
+        <img class="result-image"
+             src="{{ url_for('static', filename='uploads/' + image_file) }}"
+             alt="Uploaded MRI">
+
+        <div class="result-card {{ 'danger' if result == 'Tumor Detected' else 'safe' }}">
+            <h2>{{ result }}</h2>
+            <p>Confidence: <strong>{{ confidence }}%</strong></p>
+        </div>
+
+        <a href="/" class="btn">Analyze Another Scan</a>
+        <a href="/history" class="history-link">View History →</a>
+    </div>
+</body>
+</html>
