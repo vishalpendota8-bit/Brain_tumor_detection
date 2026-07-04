@@ -53,7 +53,12 @@ pip install -r requirements.txt
 
 ### 4. Make sure you have a model file
 The app needs `model/brain_tumor_model.h5` to start.
-
+- **Access the trained model.h5 from the below link**
+  https://www.dropbox.com/scl/fi/k1ol5lhjbqvj8zvsf2aq5/brain_tumor_model.h5?rlkey=ray4bz5jq8es6s1kkdrkrgfgz&st=8z1ckz5v&dl=0
+  
+- **Place the file in**
+  model/brain_tumor_model.h5
+  
 - **Quick test (random predictions):** run `python create_model.py`.
   This lets you see the whole app working end-to-end immediately, but the
   predictions are meaningless until you do the next part.
